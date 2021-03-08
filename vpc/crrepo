@@ -1,0 +1,4 @@
+curl -u vilparesh https://api.github.com/vilparesh/terraform_testing -d '{"name":"terraform_testing","private":false}'
+
+ssh_url": "git@github.com:vilparesh/terraform_testing.git",
+  "clone_url": "https://github.com/vilparesh/terraform_testing.git",
