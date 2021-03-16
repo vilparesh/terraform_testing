@@ -13,3 +13,11 @@ output "vpc_security_group" {
 output "vpc_pub_subnet" {
   value = "${aws_subnet.emxcel_public_subnet.*.id}"
 }
+
+output "subnet1" {
+  value = "${element(aws_subnet.emxcel_public_subnet.*.id, 1)}"
+}
+
+output "subnet2" {
+  value = "${element(aws_subnet.emxcel_public_subnet.*.id, 2)}"
+}
