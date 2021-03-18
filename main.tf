@@ -23,3 +23,10 @@ module "alb" {
   subnet1      = "module.vpc.subnet1"
   subnet2      = "module.vpc.subnet2"
 }
+
+module "asg" {
+  source           = "./asg"
+  vpc_id           = "module.vpc.vpc_identiy"
+  subnet_id        = "module.vpc.vpc_pub_subnet"
+  target_group_arn = "module.alb.alb_target_group_arn"
+}
