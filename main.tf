@@ -30,3 +30,8 @@ module "asg" {
   subnet_id        = "module.vpc.vpc_pub_subnet"
   target_group_arn = "module.alb.alb_target_group_arn"
 }
+
+module "sns_topic" {
+  source       = "./sns"
+  alarms_email = ["paresh.bavishi@emxcelsolutions.com","pnbavishi@yahoo.com"]
+}
